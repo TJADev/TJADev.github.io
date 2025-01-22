@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+  }
+  
+  #game-container {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;  
+    height: 100%;
+    background-image: url('background blue.jpeg');
+    background-size: 50% 100%;  
+    background-repeat: repeat-x;
+    z-index: 0;
+  }
+  
+  #floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .floor-block {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    background-image: url('block.webp');
+    background-size: cover;
+  }
+  
+  #player {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 310px;
+    left: 50px;
+    transform-origin: center;
+    background-image: url('player image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+  }
+  
+  .obstacle {
+    position: absolute;
+    background: transparent;
+    bottom: 50px;
+    left: 800px;
+    width: 40px;
+    height: 40px;
+    background-image: url('spikes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 2;
+  }
+  
+  #score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .game-over-screen {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .game-over-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .game-over-screen p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-over-screen button {
+    background: #ff0;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .game-over-screen button:hover {
+    background: #cc0;
+    transform: translateY(-2px);
+  }

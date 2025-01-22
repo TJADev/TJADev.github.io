@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Dash Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="background"></div>
+    <div id="floor"></div>
+    <div id="player"></div>
+    <div id="score">Score: <span id="score-value">0</span></div>
+    <div id="game-over-screen" class="game-over-screen">
+      <h1>Game Over</h1>
+      <p>Score: <span id="final-score">0</span></p>
+      <button onclick="location.reload()">Restart</button>
+    </div>
+  </div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
